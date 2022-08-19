@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a37a3473-711c-4699-a324-ffdf0bee4155" name="Changes" comment="Initial commit">
+    <list default="true" id="a37a3473-711c-4699-a324-ffdf0bee4155" name="Changes" comment="Implemented additional menu options">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/OptionsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/OptionsMenu.java" afterDir="false" />
@@ -33,14 +33,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.customizations"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SimplePortfolio" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.mykingdomforapawn.simpleportfolio.Main" />
@@ -59,7 +59,8 @@
       <option name="presentableId" value="Default" />
       <updated>1660840082544</updated>
       <workItem from="1660840086025" duration="3045000" />
-      <workItem from="1660908511654" duration="6299000" />
+      <workItem from="1660908511654" duration="12250000" />
+      <workItem from="1660921418293" duration="2063000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1660840865291</created>
@@ -75,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660842230009</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented additional menu options">
+      <created>1660915327170</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660915327170</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Implemented additional menu options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented additional menu options" />
   </component>
 </project>

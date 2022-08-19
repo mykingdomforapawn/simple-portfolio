@@ -3,6 +3,19 @@ package com.mykingdomforapawn.simpleportfolio;
 public class Account {
     private int username;
     private int password;
+    private double savingBalance;
+
+    public Account() {
+        savingBalance = 0;
+    }
+
+    public void setSavingBalance(double savingBalance) {
+        this.savingBalance = savingBalance;
+    }
+
+    public double getSavingBalance() {
+        return savingBalance;
+    }
 
     public int getUsername() {
         return username;
@@ -18,5 +31,27 @@ public class Account {
 
     public void setPassword(int password) {
         this.password = password;
+    }
+
+    public void depositFunds(double amount) {
+        if (amount >= 0) {
+            this.setSavingBalance(this.getSavingBalance() + amount);
+            System.out.println("\nDeposit successful!");
+        } else {
+            System.out.println("\nDeposit not successful! The amount cannot be negative.");
+        }
+    }
+
+    public void withdrawFunds(double amount) {
+        if (amount >= 0) {
+            if (amount <= this.getSavingBalance()) {
+                this.setSavingBalance(this.getSavingBalance() - amount);
+                System.out.println("\nWithdraw successful!");
+            } else {
+                System.out.println("\nWithdraw not successful! Not enough funds in the account.");
+            }
+        } else {
+            System.out.println("\nWithdraw not successful! The amount cannot be negative.");
+        }
     }
 }
