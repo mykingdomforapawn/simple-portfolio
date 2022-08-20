@@ -1,9 +1,13 @@
 package com.mykingdomforapawn.simpleportfolio;
 
+
+import java.util.List;
+
 public class Account {
     private int username;
     private int password;
     private double savingBalance;
+    private List<Position> portfolio;
 
     public Account() {
         savingBalance = 0;
@@ -31,6 +35,18 @@ public class Account {
 
     public void setPassword(int password) {
         this.password = password;
+    }
+
+    public List<Position> getPortfolio() {
+        return portfolio;
+    }
+
+    public void setPortfolio(List<Position> portfolio) {
+        this.portfolio = portfolio;
+    }
+
+    public String printPortfolio () {
+        return "Hello There!";
     }
 
     public void depositFunds(double amount) {

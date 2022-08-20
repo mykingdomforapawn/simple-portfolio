@@ -84,7 +84,7 @@ public class OptionsMenu {
             }
             switch (selection) {
                 case 1 -> this.getSavingAccount(account);
-                //case 2 -> this.getPortfolio(account);
+                case 2 -> this.getPortfolio(account);
                 case 3 -> {
                     System.out.println("\nSuccessfully logged out!");
                     loopVariable = false;
@@ -162,4 +162,37 @@ public class OptionsMenu {
             loopVariable = false;
         } while (loopVariable);
     }
+
+    private void getPortfolio(Account account) {
+        boolean loopVariable = true;
+
+        do {
+            try {
+                System.out.println("\nPortfolio account options: ");
+                System.out.println("Type 1 - View summary");
+                System.out.println("Type 2 - Buy asset");
+                System.out.println("Type 3 - Sell asset funds");
+                System.out.println("Type 4 - Exit saving account");
+                System.out.print("Your choice: ");
+                selection = menuInput.nextInt();
+            } catch (Exception e) {
+                System.out.println("\nInvalid character(s). Try again.");
+                menuInput = new Scanner(System.in);
+                continue;
+            }
+            switch (selection) {
+                case 1 ->
+                        System.out.println("\nSaving account balance: " + moneyFormat.format(account.getSavingBalance()));
+                case 2 -> this.getSavingDepositInput(account);
+                case 3 -> this.getSavingWithdrawInput(account);
+                case 4 -> {
+                    System.out.println("\nSuccessfully exited saving account!");
+                    loopVariable = false;
+                }
+                default -> System.out.println("\nInvalid Choice. Try again.");
+            }
+        } while (loopVariable);
+    }
 }
+
+
