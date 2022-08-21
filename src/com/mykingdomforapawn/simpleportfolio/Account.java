@@ -57,6 +57,20 @@ public class Account {
         return stringRepresentation;
     }
 
+    public void displayPortfolio() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (Position position:portfolio) {
+            stringBuilder.append(position.toString());
+        }
+
+        if (stringBuilder.length() == 0) {
+            System.out.println("\nThere are no open positions in your portfolio.");
+        } else {
+            System.out.println(stringBuilder);
+        }
+    }
+
     public void depositFunds(double amount) {
         if (amount >= 0) {
             this.setSavingBalance(this.getSavingBalance() + amount);

@@ -1,8 +1,6 @@
 package com.mykingdomforapawn.simpleportfolio;
 
 import java.text.DecimalFormat;
-import java.util.HashMap;
-import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class OptionsMenu {
@@ -10,67 +8,13 @@ public class OptionsMenu {
     DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
     int selection;
     double amount;
-    HashMap<Integer, Integer> credentials = new HashMap<>();
-
-    public void getStartMenu() {
-        boolean loopVariable = true;
-
-        do {
-            try {
-                System.out.println("\nWelcome to the Simple Portfolio project!");
-                System.out.println("Select one of the options below: ");
-                System.out.println("Type 1 - Login");
-                System.out.println("Type 2 - Quit application");
-                System.out.println("Your choice: ");
-                selection = menuInput.nextInt();
-            } catch (Exception e) {
-                System.out.println("\nInvalid character(s). Try again.");
-                menuInput = new Scanner(System.in);
-                continue;
-            }
-            switch (selection) {
-                case 1 -> this.getLogin();
-                case 2 -> {
-                    System.out.println("\nSuccessfully quit application!");
-                    loopVariable = false;
-                }
-                default -> System.out.println("\nInvalid Choice. Try again.");
-            }
-        } while (loopVariable);
-    }
-
-    public void getLogin() {
-        boolean loopVariable = true;
-        Account account = new Account();
-
-        do {
-                try {
-                    credentials.put(3366,4477);
-                    System.out.println("\nWelcome to the login page!");
-                    System.out.println("Enter your username: ");
-                    account.setUsername(menuInput.nextInt());
-                    System.out.println("Enter your password: ");
-                    account.setPassword(menuInput.nextInt());
-                } catch (Exception e) {
-                    System.out.println("\nInvalid character(s). Try again.");
-                    menuInput = new Scanner(System.in);
-                    continue;
-                }
-                for (Entry<Integer, Integer> entry : credentials.entrySet()) {
-                    if (entry.getKey() == account.getUsername() && entry.getValue() == account.getPassword()) {
-                        System.out.println("\nSuccessfully logged in!");
-                        this.getAccountType(account);
-                    }
-                }
-                loopVariable = false;
-        } while (loopVariable);
-    }
 
     public void getAccountType(Account account) {
         boolean loopVariable = true;
 
         do {
             try {
+                System.out.println("\nWelcome to the Simple Portfolio project!");
                 System.out.println("\nSelect the account you want to access: ");
                 System.out.println("Type 1 - Saving account");
                 System.out.println("Type 2 - Portfolio account");
@@ -86,7 +30,7 @@ public class OptionsMenu {
                 case 1 -> this.getSavingAccount(account);
                 case 2 -> this.getPortfolio(account);
                 case 3 -> {
-                    System.out.println("\nSuccessfully logged out!");
+                    System.out.println("\nSuccessfully quit application!");
                     loopVariable = false;
                 }
                 default -> System.out.println("\nInvalid Choice. Try again.");
@@ -181,7 +125,7 @@ public class OptionsMenu {
                 continue;
             }
             switch (selection) {
-                case 1 -> System.out.println(account);
+                case 1 -> account.displayPortfolio();
                 case 2 -> this.getSavingDepositInput(account);
                 case 3 -> this.getSavingWithdrawInput(account);
                 case 4 -> {
