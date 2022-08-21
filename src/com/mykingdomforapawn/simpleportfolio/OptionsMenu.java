@@ -170,9 +170,9 @@ public class OptionsMenu {
             try {
                 System.out.println("\nPortfolio account options: ");
                 System.out.println("Type 1 - View summary");
-                System.out.println("Type 2 - Buy asset");
-                System.out.println("Type 3 - Sell asset funds");
-                System.out.println("Type 4 - Exit saving account");
+                System.out.println("Type 2 - Open position");
+                System.out.println("Type 3 - Close position");
+                System.out.println("Type 4 - Exit portfolio account");
                 System.out.print("Your choice: ");
                 selection = menuInput.nextInt();
             } catch (Exception e) {
@@ -181,8 +181,7 @@ public class OptionsMenu {
                 continue;
             }
             switch (selection) {
-                case 1 ->
-                        System.out.println("\nSaving account balance: " + moneyFormat.format(account.getSavingBalance()));
+                case 1 -> System.out.println(account);
                 case 2 -> this.getSavingDepositInput(account);
                 case 3 -> this.getSavingWithdrawInput(account);
                 case 4 -> {

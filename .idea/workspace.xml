@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a37a3473-711c-4699-a324-ffdf0bee4155" name="Changes" comment="Implemented savings account deposit and withdraw">
-      <change afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Portfolio.java" afterDir="false" />
+    <list default="true" id="a37a3473-711c-4699-a324-ffdf0bee4155" name="Changes" comment="Added Position class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/OptionsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/OptionsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Position.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
       <workItem from="1660908511654" duration="12250000" />
       <workItem from="1660921418293" duration="2278000" />
       <workItem from="1660984659077" duration="926000" />
+      <workItem from="1660996362191" duration="506000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1660840865291</created>
@@ -118,6 +119,17 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Implemented additional menu options" />
     <MESSAGE value="Implemented savings account deposit and withdraw" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented savings account deposit and withdraw" />
+    <MESSAGE value="Added Position class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Position class" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,6 +1,7 @@
 package com.mykingdomforapawn.simpleportfolio;
 
 
+import java.util.Collections;
 import java.util.List;
 
 public class Account {
@@ -11,6 +12,7 @@ public class Account {
 
     public Account() {
         savingBalance = 0;
+        portfolio = Collections.emptyList();
     }
 
     public void setSavingBalance(double savingBalance) {
@@ -45,8 +47,14 @@ public class Account {
         this.portfolio = portfolio;
     }
 
-    public String printPortfolio () {
-        return "Hello There!";
+    public String toString() {
+        String stringRepresentation ="";
+        Position testPosition = new Position("ABC", 3, 50);
+        System.out.println(testPosition);
+        for (Position position:portfolio) {
+            stringRepresentation = stringRepresentation + position.toString();
+        }
+        return stringRepresentation;
     }
 
     public void depositFunds(double amount) {

@@ -1,9 +1,19 @@
 package com.mykingdomforapawn.simpleportfolio;
 
 public class Position {
-    private double shares;
-    private int date;
     private String ticker;
+    private double shares;
+    private int price;
+
+    public Position(String ticker, double shares, int price) {
+        this.ticker =  ticker;
+        this.shares = shares;
+        this.price = price;
+    }
+
+    public String toString() {
+        return "\nTicker: " + ticker + " | Shares: " + shares + " | Price: " + price;
+    }
 
     public double getShares() {
         return shares;
@@ -13,19 +23,19 @@ public class Position {
         this.shares = shares;
     }
 
-    public int getDate() {
-        return date;
-    }
-
-    public void setDate(int date) {
-        this.date = date;
-    }
-
     public String getTicker() {
         return ticker;
     }
 
     public void setTicker(String ticker) {
         this.ticker = ticker;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }
