@@ -8,6 +8,8 @@ public class OptionsMenu {
     DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
     int selection;
     double amount;
+    int price;
+    String ticker;
 
     public void getAccountType(Account account) {
         boolean loopVariable = true;
@@ -18,7 +20,7 @@ public class OptionsMenu {
                 System.out.println("\nSelect the account you want to access: ");
                 System.out.println("Type 1 - Saving account");
                 System.out.println("Type 2 - Portfolio account");
-                System.out.println("Type 3 - Logout");
+                System.out.println("Type 3 - Quit application");
                 System.out.print("Your choice: ");
                 selection = menuInput.nextInt();
             } catch (Exception e) {
@@ -126,7 +128,7 @@ public class OptionsMenu {
             }
             switch (selection) {
                 case 1 -> account.displayPortfolio();
-                case 2 -> this.getSavingDepositInput(account);
+                case 2 -> this.getPortfolioOpenInput(account);
                 case 3 -> this.getSavingWithdrawInput(account);
                 case 4 -> {
                     System.out.println("\nSuccessfully exited saving account!");
@@ -134,6 +136,27 @@ public class OptionsMenu {
                 }
                 default -> System.out.println("\nInvalid Choice. Try again.");
             }
+        } while (loopVariable);
+    }
+
+    private void getPortfolioOpenInput(Account account) {
+        boolean loopVariable = true;
+
+        do {
+            try {
+                System.out.print("Ticker you want to Buy: ");
+                ticker = menuInput.next();
+                System.out.print("Number of shares you want to buy: ");
+                amount = menuInput.nextInt();
+                System.out.print("Price per share: ");
+                price = menuInput.nextInt();
+            } catch (Exception e) {
+                System.out.println("\nInvalid character(s). Try again.");
+                menuInput = new Scanner(System.in);
+                continue;
+            }
+            account.openPosition(new Position(ticker, amount, price));
+            loopVariable = false;
         } while (loopVariable);
     }
 }
