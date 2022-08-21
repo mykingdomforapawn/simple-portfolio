@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a37a3473-711c-4699-a324-ffdf0bee4155" name="Changes" comment="Refactored out login">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Account.java" afterDir="false" />
+    <list default="true" id="a37a3473-711c-4699-a324-ffdf0bee4155" name="Changes" comment="Implemented open position">
       <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/OptionsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/OptionsMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +66,7 @@
       <workItem from="1660921418293" duration="2278000" />
       <workItem from="1660984659077" duration="926000" />
       <workItem from="1660996362191" duration="506000" />
-      <workItem from="1661104557692" duration="5896000" />
+      <workItem from="1661104557692" duration="6013000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1660840865291</created>
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661106775293</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implemented open position">
+      <created>1661110559802</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661110559802</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +140,8 @@
     <MESSAGE value="Implemented savings account deposit and withdraw" />
     <MESSAGE value="Added Position class" />
     <MESSAGE value="Refactored out login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored out login" />
+    <MESSAGE value="Implemented open position" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented open position" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -159,6 +159,10 @@ public class OptionsMenu {
             loopVariable = false;
         } while (loopVariable);
     }
+
+    private void getPortfolioCloseInput(Account account) {
+
+    }
 }
 
 
