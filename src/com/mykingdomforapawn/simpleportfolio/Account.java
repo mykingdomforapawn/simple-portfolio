@@ -27,31 +27,26 @@ public class Account {
     }
 
     public void openPosition (Position position) {
+        ArrayList<String> tickerRegistry = Position.getTickerRegistry();
+        String ticker = position.getTicker();
 
         if (this.savingBalance >= position.getShares() * position.getPrice()) {
             this.savingBalance -= position.getShares() * position.getPrice();
-            this.portfolio.add(position); // check for duplicate positions
+
+            if (tickerRegistry.contains(ticker)) {
+                int tickerRegistryPosition = tickerRegistry.indexOf(ticker);
+                Position existingPosition = this.portfolio.get(tickerRegistryPosition);
+                this.portfolio.set(tickerRegistryPosition, existingPosition.mergePositions(position));
+            } else {
+                tickerRegistry.add(position.getTicker());
+                Position.setTickerRegistry(tickerRegistry);
+                this.portfolio.add(position);
+            }
         } else {
             System.out.println("\nThere are not enough funds in your saving account.");
         }
 
-        /*
-        if (Position.getTickerRegistry(). contains position.getTicker()) {
-            add position to existing position
-        } else {
-            this.portfolio.add(position);
-            update ticker registry
-            update total value of portfolio
-        }
 
-        this.portfolio
-        tickerRegistry.add(ticker);
-        portfolioValue += shares * price;
-        // check if enough money in saving account
-        // check if position exists
-        // either add to existing or make new
-        this.portfolio.add(newPosition);
-        */
     }
 
     public void closePosition (Position position) {
