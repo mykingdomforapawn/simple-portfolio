@@ -1,9 +1,13 @@
 package com.mykingdomforapawn.simpleportfolio;
 
+import java.util.ArrayList;
+
 public class Position {
     private String ticker;
     private double shares;
-    private int price;
+    private double price;
+    private static ArrayList<String> tickerRegistry;
+    private int portfolioValue;
 
     public Position(String ticker, double shares, int price) {
         this.ticker =  ticker;
@@ -13,6 +17,14 @@ public class Position {
 
     public String toString() {
         return "\nTicker: " + ticker + " | Shares: " + shares + " | Price: " + price;
+    }
+
+    public static ArrayList<String> getTickerRegistry() {
+        return tickerRegistry;
+    }
+
+    public static void setTickerRegistry(ArrayList<String> tickerRegistry) {
+        Position.tickerRegistry = tickerRegistry;
     }
 
     public double getShares() {
@@ -31,11 +43,11 @@ public class Position {
         this.ticker = ticker;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }

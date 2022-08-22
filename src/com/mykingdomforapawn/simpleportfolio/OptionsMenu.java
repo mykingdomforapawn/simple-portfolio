@@ -128,8 +128,8 @@ public class OptionsMenu {
             }
             switch (selection) {
                 case 1 -> account.displayPortfolio();
-                case 2 -> this.getPortfolioOpenInput(account);
-                case 3 -> this.getSavingWithdrawInput(account);
+                case 2 -> this.getPositionOpenInput(account);
+                case 3 -> this.getPositionCloseInput(account);
                 case 4 -> {
                     System.out.println("\nSuccessfully exited saving account!");
                     loopVariable = false;
@@ -139,12 +139,12 @@ public class OptionsMenu {
         } while (loopVariable);
     }
 
-    private void getPortfolioOpenInput(Account account) {
+    private void getPositionOpenInput(Account account) {
         boolean loopVariable = true;
 
         do {
             try {
-                System.out.print("Ticker you want to Buy: ");
+                System.out.print("Ticker you want to buy: ");
                 ticker = menuInput.next();
                 System.out.print("Number of shares you want to buy: ");
                 amount = menuInput.nextInt();
@@ -160,8 +160,27 @@ public class OptionsMenu {
         } while (loopVariable);
     }
 
-    private void getPortfolioCloseInput(Account account) {
+    private void getPositionCloseInput(Account account) {
+        boolean loopVariable = true;
 
+        do {
+            try {
+                System.out.println("\nYour current portfolio: ");
+                account.displayPortfolio();
+                System.out.print("Ticker you want to sell: ");
+                ticker = menuInput.next();
+                System.out.print("Number of shares you want to sell: ");
+                amount = menuInput.nextInt();
+                System.out.print("Price per share: ");
+                price = menuInput.nextInt();
+            } catch (Exception e) {
+                System.out.println("\nInvalid character(s). Try again.");
+                menuInput = new Scanner(System.in);
+                continue;
+            }
+            account.closePosition(new Position(ticker, amount, price));
+            loopVariable = false;
+        } while (loopVariable);
     }
 }
 

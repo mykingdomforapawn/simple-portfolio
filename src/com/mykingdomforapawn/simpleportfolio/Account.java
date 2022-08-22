@@ -27,6 +27,39 @@ public class Account {
     }
 
     public void openPosition (Position position) {
+
+        if (this.savingBalance >= position.getShares() * position.getPrice()) {
+            this.savingBalance -= position.getShares() * position.getPrice();
+            this.portfolio.add(position); // check for duplicate positions
+        } else {
+            System.out.println("\nThere are not enough funds in your saving account.");
+        }
+
+        /*
+        if (Position.getTickerRegistry(). contains position.getTicker()) {
+            add position to existing position
+        } else {
+            this.portfolio.add(position);
+            update ticker registry
+            update total value of portfolio
+        }
+
+        this.portfolio
+        tickerRegistry.add(ticker);
+        portfolioValue += shares * price;
+        // check if enough money in saving account
+        // check if position exists
+        // either add to existing or make new
+        this.portfolio.add(newPosition);
+        */
+    }
+
+    public void closePosition (Position position) {
+        // check if position with ticker exist if not error
+        // check if enough shares of position
+        // subtract shares, if shares zero, delete position
+        // calculate return and display on screen
+        // add return to saving account
         this.portfolio.add(position);
     }
 
