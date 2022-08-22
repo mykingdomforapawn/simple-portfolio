@@ -26,6 +26,11 @@ public class Position {
         return this;
     }
 
+    public Position subtractPosition (Position position) {
+        this.shares -= position.getShares();
+        return this;
+    }
+
     public static ArrayList<String> getTickerRegistry() {
         return tickerRegistry;
     }
@@ -36,10 +41,6 @@ public class Position {
 
     public double getShares() {
         return shares;
-    }
-
-    public void setShares(double shares) {
-        this.shares = shares;
     }
 
     public String getTicker() {

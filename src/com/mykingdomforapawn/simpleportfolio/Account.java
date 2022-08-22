@@ -1,11 +1,13 @@
 package com.mykingdomforapawn.simpleportfolio;
 
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Account {
     private double savingBalance;
     final private ArrayList<Position> portfolio;
+    DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
 
     public Account() {
         savingBalance = 0;
@@ -45,17 +47,37 @@ public class Account {
         } else {
             System.out.println("\nThere are not enough funds in your saving account.");
         }
-
-
     }
 
     public void closePosition (Position position) {
-        // check if position with ticker exist if not error
-        // check if enough shares of position
+        ArrayList<String> tickerRegistry = Position.getTickerRegistry();
+        String ticker = position.getTicker();
+
+        if (tickerRegistry.contains(ticker)) {
+            int tickerRegistryPosition = tickerRegistry.indexOf(ticker);
+            Position existingPosition = this.portfolio.get(tickerRegistryPosition);
+
+            if (existingPosition.getShares() >= position.getShares()) {
+                double returnOnInvestment;
+                returnOnInvestment = (position.getPrice() - existingPosition.getPrice()) * position.getShares();
+                System.out.println("\nYour return on investment was: " + moneyFormat.format(returnOnInvestment));
+
+                if (existingPosition.getShares() == position.getShares()) {
+                    this.portfolio.remove(tickerRegistryPosition);
+                } else {
+                    this.portfolio.set(tickerRegistryPosition, existingPosition.subtractPosition(position));
+                }
+
+            } else {
+                System.out.println("\nThere are not enough shares in this position.");
+            }
+
+        } else {
+            System.out.println("\nThere is no position with that ticker in your portfolio.");
+        }
         // subtract shares, if shares zero, delete position
         // calculate return and display on screen
         // add return to saving account
-        this.portfolio.add(position);
     }
 
     public void depositFunds(double amount) {
