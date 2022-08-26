@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a37a3473-711c-4699-a324-ffdf0bee4155" name="Changes" comment="Added duplicate check when position open">
-      <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mykingdomforapawn/simpleportfolio/Position.java" afterDir="false" />
-    </list>
+    <list default="true" id="a37a3473-711c-4699-a324-ffdf0bee4155" name="Changes" comment="Added duplicate check when position open" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,7 +164,8 @@
     <MESSAGE value="Prepared portfolio close" />
     <MESSAGE value="Added saving account check when position opened" />
     <MESSAGE value="Added duplicate check when position open" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added duplicate check when position open" />
+    <MESSAGE value="Updates to cover .idea directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to cover .idea directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
