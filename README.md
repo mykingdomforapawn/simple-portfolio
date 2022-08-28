@@ -1,9 +1,10 @@
 # simple-portfolio
 
-> This entire repository is a working progress. Next up are some queue, hash table and search tree implementations.
+> This project is part of my software architecture journey. See my [software-architecture-journey](https://github.com/mykingdomforapawn/software-architecture-journey) repository for more details.
 
-Brief description of what the project contains.
+This simple project lets the user interact with an application in the terminal to set up and play around with a combination of a savings account and a stock portfolio. 
 
+---
 
 ## Table of contents:
 - [Why?](#why)
@@ -14,9 +15,17 @@ Brief description of what the project contains.
 
 ## Why?
 
-I started this repository after reading [this article](https://www.freecodecamp.org/news/why-i-studied-full-time-for-8-months-for-a-google-interview-cc662ce9bb13/) by John Washam and partially working my way through his recommended curriculum for computer scientists. I will keep adding code to this repository here and there but due to my job and my many other intrests, it will be slow and irregular. Besides improving my programming skills significantly in the process of creating this repository, I want to use it as a sort of library to quickly access code implementation that might be useful for other projects. 
+Having worked with other programming languages, I needed a small and comprehensive project to get into Java specifics. I did not want to create an application that is useful for others, but just get a feeling of the programming language by trying out some basic concepts.
 
 ## How?
 
+I started by watching some videos explaining the basics of Java and then brainstormed ideas on projects that could be implemented using these concepts. Quickly, the learning process became a guided project with me learning something new and then instantly trying to implement the simplest version of that into the application. 
+
 ## What?
-This repository is a collection of code that I wrote (and keep writing!) to consolidate knowledge and learn new programming techniques. You can find implementations of basic data structures, search/sorting algorithms, graph representations and more. I usually transfer key take-aways into [anki flashcards](https://apps.ankiweb.net/)  which you can find in one of [my other repositories](https://github.com/mykingdomforapawn/ankiFlashcards) as *Programming.apkg*.
+
+- Basic Java project setup in IntelliJ
+- Classes and objects
+- Fields, constructors, methods, accessors & mutators
+- Static members
+- Control statements
+- User interaction with application running in terminal
