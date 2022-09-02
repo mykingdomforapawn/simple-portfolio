@@ -9,7 +9,6 @@ This simple project lets the user interact with an application in the terminal t
 ## Table of contents:
 - [Why? - How? - What?](#why---how---what)
 - [Class diagram](#class-diagram)
-- [Get started](#get-started)
 
 ---
 
@@ -17,15 +16,13 @@ This simple project lets the user interact with an application in the terminal t
 
 Having worked with other programming languages, I needed a small and comprehensive project to get into Java. This application does not serve any specific purpose other than letting me try out some concepts of the programming language. I started by watching some videos explaining the basics of Java and then just started from there with a learning-by-doing mindset. Whatever concept I stumbled across, I tried to implement the simplest version of it. This project covers: 
 
-- Basic Java project setup in IntelliJ
-- Classes and objects
-- Fields, constructors, methods, accessors & mutators
-- Static members
+- Variables, constants, types, etc.
+- Classes, objects, fields, methods, etc.
 - Control statements
+- Java project setup in IntelliJ
 - User interaction with application running in terminal
+- UML class diagrams
 
 ## Class diagram
 
 ![Class diagram](architect_journey_class_diagram.drawio.png)
-
-## Get started
