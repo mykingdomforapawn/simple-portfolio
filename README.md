@@ -25,4 +25,4 @@ Having worked with other programming languages, I needed a small and comprehensi
 
 ## Class diagram
 
-![Class diagram](architect_journey_class_diagram.drawio.png)
+![Class diagram](simple_portfolio_class_diagram.drawio.png)
