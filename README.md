@@ -2,7 +2,7 @@
 
 > This project is part of my software architecture journey. See my [software-architecture-journey](https://github.com/mykingdomforapawn/software-architecture-journey) repository for more details.
 
-This simple project lets the user interact with a java application in the terminal to set up and play around with a combination of a savings account and a stock portfolio. 
+This simple project lets the user interact with a java application in the terminal to set up and play around with a combination of a savings account and a stock portfolio account. 
 
 ---
 
